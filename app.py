@@ -42,9 +42,7 @@ app = Flask(__name__)
 with open('model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+
 
 @app.route('/predict', methods=['POST'])
 def predict():
